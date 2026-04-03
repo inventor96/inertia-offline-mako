@@ -51,7 +51,7 @@ class InertiaOfflinePackage extends Package
 			!empty($offlineRoutesPath)
 			&& (
 				!is_string($offlineRoutesPath)
-				|| str_starts_with($offlineRoutesPath, '/')
+				|| !str_starts_with($offlineRoutesPath, '/')
 			)
 		) {
 			throw new \InvalidArgumentException('Invalid offline routes path: ' . $offlineRoutesPath);
@@ -60,7 +60,7 @@ class InertiaOfflinePackage extends Package
 			!empty($offlineVersionPath)
 			&& (
 				!is_string($offlineVersionPath)
-				|| str_starts_with($offlineVersionPath, '/')
+				|| !str_starts_with($offlineVersionPath, '/')
 			)
 		) {
 			throw new \InvalidArgumentException('Invalid offline version path: ' . $offlineVersionPath);
