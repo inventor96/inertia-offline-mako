@@ -4,6 +4,8 @@ A Mako framework adapter for [inertia-offline](https://github.com/inventor96/ine
 
 > Beta: offline read-only layer for Inertia.js apps, focused on safe cached content and navigation fallback.
 
+This PHP backend package is designed to work with [`inertia-offline`](https://github.com/inventor96/inertia-offline-js) (the JS/TS frontend service worker library). Both the frontend and the backend aspects are required for an Inertia.js app.
+
 ## Installation
 
 ### 1. Install via Composer
