@@ -2,6 +2,8 @@
 
 A Mako framework adapter for [inertia-offline](https://github.com/inventor96/inertia-offline), enabling offline-first capabilities for Inertia.js applications.
 
+> Beta: offline read-only layer for Inertia.js apps, focused on safe cached content and navigation fallback.
+
 ## Installation
 
 ### 1. Install via Composer
