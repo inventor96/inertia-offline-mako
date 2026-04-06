@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace inventor96\InertiaOfflineMako;
 
-use mako\config\Config;
+use inventor96\Inertia\Inertia;
 use mako\http\routing\Controller;
 
 class OfflinePwaController extends Controller {
@@ -22,13 +22,13 @@ class OfflinePwaController extends Controller {
         ]);
     }
 
-    public function version(Config $config): mixed {
+    public function version(Inertia $inertia): mixed {
         // set the appropriate cache control headers to prevent caching of the route list response
         $this->response->headers->add('Cache-Control', 'no-store, must-revalidate, private', true);
 
         // return the Inertia version
         return $this->jsonResponse([
-            'version' => (string) $config->get('inertia::version.0'),
+            'version' => $inertia->getVersion(),
         ]);
     }
 }
